@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>静寂の堂 — GitHub 人気 projets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --sumi:#1c1a17;
+    --hai:#8a857c;
+    --usuzumi:#4a463f;
+    --kinari:#faf8f4;
+    --line:#e4e0d8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Noto Serif JP', serif;
+    background:var(--kinari);
+    color:var(--sumi);
+    font-weight:300;
+    line-height:2.2;
+    letter-spacing:0.14em;
+  }
+
+  /* ── 余白の骨組み ── */
+  .wrap{max-width:880px;margin:0 auto;padding:0 6vw;}
+
+  header{padding:18vh 0 14vh;position:relative;}
+  .kicker{
+    font-size:0.72rem;color:var(--hai);
+    letter-spacing:0.55em;margin-bottom:4rem;
+  }
+  h1{
+    font-weight:200;font-size:clamp(2rem,5vw,3.4rem);
+    letter-spacing:0.3em;line-height:1.9;
+  }
+  h1 span{display:block;}
+  .lead{
+    margin-top:4rem;max-width:34em;
+    font-size:0.9rem;color:var(--usuzumi);
+  }
+
+  /* 竪排文字 */
+  .vertical{
+    position:absolute;top:16vh;right:2vw;
+    writing-mode:vertical-rl;
+    font-size:0.78rem;color:var(--hai);
+    letter-spacing:0.7em;
+    border-left:1px solid var(--line);
+    padding-left:1.4rem;height:34vh;
+  }
+  .vertical-strong{
+    writing-mode:vertical-rl;
+    font-size:1.15rem;color:var(--sumi);
+    letter-spacing:0.9em;font-weight:400;
+  }
+
+  /* 区切り */
+  hr{border:none;border-top:1px solid var(--line);}
+
+  /* ── 作品（プロジェクト） ── */
+  .moq{
+    padding:11vh 0;
+    border-bottom:1px solid var(--line);
+    opacity:0;transform:translateY(18px);
+    transition:opacity 1.6s ease, transform 1.6s ease;
+  }
+  .moq:first-of-type{border-top:1px solid var(--line);}
+  .moq.visible{opacity:1;transform:none;}
+  .moq:last-of-type{border-bottom:1px solid var(--line);}
+
+  .num{
+    font-size:0.7rem;color:var(--hai);
+    letter-spacing:0.4em;display:block;margin-bottom:1.6rem;
+  }
+  .moq h2{
+    font-weight:400;font-size:1.5rem;letter-spacing:0.2em;margin-bottom:0.4rem;
+  }
+  .moq .en{
+    font-weight:200;font-size:0.8rem;color:var(--hai);
+    letter-spacing:0.3em;margin-bottom:2.6rem;
+  }
+  .moq p{
+    font-size:0.86rem;color:var(--usuzumi);max-width:36em;margin-bottom:2.6rem;
+  }
+  .meta{
+    display:flex;flex-wrap:wrap;gap:2.4rem;
+    font-size:0.72rem;color:var(--hai);letter-spacing:0.25em;
+  }
+  .meta b{font-weight:400;color:var(--usuzumi);}
+
+  /* ── 締め ── */
+  footer{padding:14vh 0 10vh;text-align:center;}
+  footer p{font-size:0.72rem;color:var(--hai);letter-spacing:0.5em;}
+  .enso{
+    width:64px;height:64px;border:1px solid var(--sumi);
+    border-radius:50%;margin:0 auto 4rem;
+    opacity:0.35;transform:rotate(-20deg) scale(0.94);
+  }
+
+  /* 淡入の遅延 */
+  .d1{transition-delay:.15s}.d2{transition-delay:.3s}.d3{transition-delay:.45s}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="vertical">二〇二五年　夏　通俗の瀬</div>
+    <p class="kicker">GitHub Trending 総覽</p>
+    <h1>
+      <span>静寂の堂</span>
+      <span>— 八つの作品</span>
+    </h1>
+    <p class="lead">
+      騒がしい世界の片隅で、日々生まれ続けるソフトウェアたち。
+      ここに並ぶ八つのプロジェクトは、それぞれ異なる思想をもち、
+      異なる静けさを奏でている。ただ静かに、眺めていただきたい。
+    </p>
+  </header>
+
+  <main>
+
+    <article class="moq">
+      <span class="num">其一</span>
+      <h2>リアクト</h2>
+      <p class="en">facebook / react</p>
+      <p>ユーザインターフェイスを組み立てるためのライブラリ。
+        宣言的な思考は、画面という流れを、穏やかな静止画へと変える。</p>
+      <div class="meta"><span>言語 <b>JavaScript</b></span><span>星 <b>234k</b></span></div>
+    </article>
+
+    <article class="moq d1">
+      <span class="num">其二</span>
+      <h2>ヴィジュアル・スタジオ・コード</h2>
+      <p class="en">microsoft / vscode</p>
+      <p>軽やかでありながら深い、コードエディタ。
+        拡張という形で、書き手それぞれの道具室が築かれてゆく。</p>
+      <div class="meta"><span>言語 <b>TypeScript</b></span><span>星 <b>170k</b></span></div>
+    </article>
+
+    <article class="moq d2">
+      <span class="num">其三</span>
+      <h2>ラスティ</h2>
+      <p class="en">rust-lang / rust</p>
+      <p>安全と速度を両立させる言語。所有権という規律が、
+        プログラマの夜を静かに守っている。</p>
+      <div class="meta"><span>言語 <b>Rust</b></span><span>星 <b>103k</b></span></div>
+    </article>
+
+    <article class="moq d3">
+      <span class="num">其四</span>
+      <h2>オラーマ</h2>
+      <p class="en">ollama / ollama</p>
+      <p>大きな言葉の模型を、手元の機械に招き入れる道具。
+        雲の上ではなく、机の上で対話する。</p>
+      <div class="meta"><span>言語 <b>Go</b></span><span>星 <b>144k</b></span></div>
+    </article>
+
+    <article class="moq">
+      <span class="num">其五</span>
+      <h2>ブラウザ・ユース</h2>
+      <p class="en">browser-use / browser-use</p>
+      <p>人工の知性に、網の目のような画面を歩かせる。
+        巡ることの記憶が、自動となって積もる。</p>
+      <div class="meta"><span>言語 <b>Python</b></span><span>星 <b>68k</b></span></div>
+    </article>
+
+    <article class="moq d1">
+      <span class="num">其六</span>
+      <h2>ストーム</h2>
+      <p class="en">stanford-oval / storm</p>
+      <p>知識を集め、編み、一つの文章へと落とし着ける。
+        調べものの儀式を、静かに代替する仕組み。</p>
+      <div class="meta"><span>言語 <b>Python</b></span><span>星 <b>24k</b></span></div>
+    </article>
+
+    <article class="moq d2">
+      <span class="num">其七</span>
+      <h2>トランスフォーマーズ</h2>
+      <p class="en">huggingface / transformers</p>
+      <p>万の模型がひとつの庭に植わる。
+        引くこと、育てること、分かち合うことの作法。</p>
+      <div class="meta"><span>言語 <b>Python</b></span><span>星 <b>144k</b></span></div>
+    </article>
+
+    <article class="moq d3">
+      <span class="num">其八</span>
+      <h2>サイソン</h2>
+      <p class="en">python / cpython</p>
+      <p>読みやすさを信条とする言語の、その奥にある本体。
+        単純であることを選ぶ勇気の、根幹。</p>
+      <div class="meta"><span>言語 <b>Python / C</b></span><span>星 <b>66k</b></span></div>
+    </article>
+
+  </main>
+
+  <footer>
+    <div class="enso" aria-hidden="true"></div>
+    <p class="vertical-strong" style="margin-bottom:3rem;">観　ず　已　む　能　わ　ず</p>
+    <p>— 静寂の堂 — GitHub Popular Repositories</p>
+  </footer>
+
+</div>
+
+<script>
+  // 静かな淡入のみ。重い演出は用いない。
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    }
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.moq').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
